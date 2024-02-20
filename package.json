@@ -1,0 +1,30 @@
+{
+  "name": "mela-utility",
+  "version": "0.0.1",
+  "description": "",
+  "bin": {
+    "auto-build-and-serve": "bin/auto-build-and-serve.js",
+    "abas": "bin/auto-build-and-serve.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "abas": "node src/auto-build-and-serve/index.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "kolorist": "^1.8.0",
+    "live-server": "^1.2.2",
+    "lodash": "^4.17.21",
+    "nodemon": "^3.0.3",
+    "prompts": "^2.4.2"
+  }
+}
