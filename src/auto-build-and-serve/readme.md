@@ -20,8 +20,12 @@
 #### How to use
 1. Open your terminal, and run `abas`
 > When you first time use this commond-line tool, the script will generate a initial config file `~/.mela/abas.config.json`, then you need to repleace with your own env configurations(This only need to config one time each project)(**Usually you just only need to change the `projectPath` field to your own**). Here is [config template](./template.abas.config.json). **After you setup your config file, run `abas` again**.
+
+> Please note that when you configure `build.cmd` variables, `the windows environment and the unix* environment may be different`. For example, the unix* environment may use `npm` and `npx`, while the windows environment uses `npm.cmd` and `npx.cmd`.
+
 2. Set you chrome plugin`requestly` config match with your config file, as below:
 ![your config must match with requestly config url](./pic/setup-requestly.png)
+
 3. Then you can visit your website and refresh.
 
 ## Configuration
