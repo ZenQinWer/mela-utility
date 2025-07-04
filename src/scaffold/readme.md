@@ -15,7 +15,7 @@ Help create api
 ## usage:
 1. Step into your project directory, such as `productstore`.(`cd ~/Documents/code-repo/DEP-Phase1/fe-library/productstore`)
 2. Then input commond `mela-ga` (**ga** is short for **generate api**)
-    1. input your module(such as `aaa-bbb-ccc`)
+    1. input your module(such as `aaa/bbb/ccc`)
     2. you will see your api auto created
 
 # mela-gs
