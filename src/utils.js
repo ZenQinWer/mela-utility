@@ -192,6 +192,10 @@ function readJsonFile(filePath) {
     return JSON.parse(fs.readFileSync(filePath, { encoding: 'utf-8', flag: 'r' }));
 };
 
+function readFile(filename) {
+    return fs.readFileSync(filename, { encoding: 'utf-8', flag: 'r' });
+}
+
 function writeFile(filename, content) {
     fs.writeFileSync(filename, content, { encoding: 'utf-8' });
 }
@@ -315,6 +319,7 @@ module.exports = {
     isDirectory,
     makeDirDashP,
     readJsonFile,
+    readFile,
     writeFile,
     getAbsPathOfGivenAbsPath,
 

@@ -1,14 +1,15 @@
 {
-    "productstore:windows::template": {
-        "projectPath": "D:\\文档\\code-repo\\DEP-Phase1\\fe-library\\productstore",
-        "nodeMajorVersionExpect": "=14",
+    "productstore:windows": {
+        "projectPath": "C:\\Users\\cn4095\\Documents\\code-repo\\DEP-Phase1\\fe-library\\productstore",
+        "nodeMajorVersionExpect": "=16",
         "nodemon": {
             "ext": "js,vue",
             "watch": [
                 "."
             ],
             "ignore": [
-                "public"
+                "public",
+                "dependencyGraph.json"
             ]
         },
         "build": {
@@ -33,17 +34,243 @@
             "open": false
         }
     },
-
-    "productstore:mac::template": {
-        "projectPath": "/Users/zengqingwen/Documents/com.melaleuca/mela-fe.siteCore-vue/fe-library/productstore",
-        "nodeMajorVersionExpect": "=13||=14",
+    "productstore:windows::useSourceMap": {
+        "projectPath": "C:\\Users\\cn4095\\Documents\\code-repo\\DEP-Phase1\\fe-library\\productstore",
+        "nodeMajorVersionExpect": "=16",
         "nodemon": {
             "ext": "js,vue",
             "watch": [
                 "."
             ],
             "ignore": [
-                "public"
+                "public",
+                "dependencyGraph.json"
+            ]
+        },
+        "build": {
+            "cmd": "npx.cmd",
+            "params": ["webpack", "--mode=production", "--env", "production", "--devtool", "source-map"],
+            "cwd": "."
+        },
+        "bundle": {
+            "useOriginSource": true,
+            "bundleMap": {
+                "public/js/myDebug.js": [
+                    "public/js/vendor.js",
+                    "public/js/index.js",
+                    "public/js/brands-prod.js"
+                ]
+            }
+        },
+        "liveServer": {
+            "port": 15566,
+            "host": "0.0.0.0",
+            "root": "public",
+            "open": false
+        }
+    },
+    "productstore:windows::run:build:mockserver": {
+        "projectPath": "C:\\Users\\cn4095\\Documents\\code-repo\\DEP-Phase1\\fe-library\\productstore",
+        "nodeMajorVersionExpect": "=16",
+        "nodemon": {
+            "ext": "js,vue,hbs,json",
+            "watch": [
+                "."
+            ],
+            "ignore": [
+                "public",
+                "dependencyGraph.json"
+            ]
+        },
+        "build": {
+            "cmd:commont": "npm.cmd",
+            "params:commont": ["run", "build:mockserver"],
+            "cmd": "npx.cmd",
+            "params:note": "\"--env\", \"cimode=deploy\"   will build patternlab",
+            "params::full-command": "npx webpack --mode=production --env mockserver --env production --env cimode=deploy",
+            "params": ["webpack", "--mode=production", "--env", "mockserver", "--env", "production", "--env", "cimode=deploy"],
+            "cwd": "."
+        },
+        "bundle": {
+            "useOriginSource": false,
+            "// bundleMap": {
+                "public/js/myDebug.js": [
+                    "public/js/vendor.js",
+                    "public/js/index.js",
+                    "public/js/brands-prod.js"
+                ]
+            }
+        },
+        "liveServer": {
+            "port": 15566,
+            "host": "0.0.0.0",
+            "root": "public",
+            "open": true
+        }
+    },
+
+    "productstore:mac": {
+        "projectPath": "/Users/zengqingwen/Documents/com.melaleuca/mela-fe.siteCore-vue/fe-library/productstore",
+        "nodeMajorVersionExpect": "=16",
+        "nodemon": {
+            "ext": "js,vue",
+            "watch": [
+                "."
+            ],
+            "ignore": [
+                "public",
+                "dependencyGraph.json"
+            ]
+        },
+        "build": {
+            "cmd": "npm",
+            "params": ["run", "build"],
+            "cwd": "."
+        },
+        "bundle": {
+            "useOriginSource": false,
+            "bundleMap": {
+                "public/js/myDebug.js": [
+                    "public/js/vendor.js",
+                    "public/js/index.js",
+                    "public/js/brands-prod.js"
+                ]
+            }
+        },
+        "liveServer": {
+            "port": 15566,
+            "host": "0.0.0.0",
+            "root": "public",
+            "open": false
+        }
+    },
+    "productstore:mac::useSourceMap": {
+        "projectPath": "/Users/zengqingwen/Documents/com.melaleuca/mela-fe.siteCore-vue/fe-library/productstore",
+        "nodeMajorVersionExpect": "=16",
+        "nodemon": {
+            "ext": "js,vue",
+            "watch": [
+                "."
+            ],
+            "ignore": [
+                "public",
+                "dependencyGraph.json"
+            ]
+        },
+        "build": {
+            "cmd": "npx",
+            "params": ["webpack", "--mode=production", "--env", "production", "--devtool", "source-map"],
+            "cwd": "."
+        },
+        "bundle": {
+            "useOriginSource": true,
+            "bundleMap": {
+                "public/js/myDebug.js": [
+                    "public/js/vendor.js",
+                    "public/js/index.js",
+                    "public/js/brands-prod.js"
+                ]
+            }
+        },
+        "liveServer": {
+            "port": 15566,
+            "host": "0.0.0.0",
+            "root": "public",
+            "open": false
+        }
+    },
+    "productstore:mac::run:build:mockserver": {
+        "projectPath": "/Users/zengqingwen/Documents/com.melaleuca/mela-fe.siteCore-vue/fe-library/productstore",
+        "nodeMajorVersionExpect": "=16",
+        "nodemon": {
+            "ext": "js,vue,hbs,json",
+            "watch": [
+                "."
+            ],
+            "ignore": [
+                "public",
+                "dependencyGraph.json"
+            ]
+        },
+        "build": {
+            "cmd:commont": "npm",
+            "params:commont": ["run", "build:mockserver"],
+            "cmd": "npx",
+            "params:note": "\"--env\", \"cimode=deploy\"   will build patternlab",
+            "params": ["webpack", "--mode=production", "--env", "mockserver", "--env", "production", "--env", "cimode=deploy"],
+            "cwd": "."
+        },
+        "bundle": {
+            "useOriginSource": false,
+            "// bundleMap": {
+                "public/js/myDebug.js": [
+                    "public/js/vendor.js",
+                    "public/js/index.js",
+                    "public/js/brands-prod.js"
+                ]
+            }
+        },
+        "liveServer": {
+            "port": 15566,
+            "host": "0.0.0.0",
+            "root": "public",
+            "open": true
+        }
+    },
+
+    "magazines:windows::run:build:mockserver": {
+        "projectPath": "C:\\Users\\cn4095\\Documents\\code-repo\\DEP-Phase1\\fe-library\\magazines",
+        "nodeMajorVersionExpect": "=16",
+        "nodemon": {
+            "ext": "js,vue,hbs,json",
+            "watch": [
+                "."
+            ],
+            "ignore": [
+                "public",
+                "dependencyGraph.json"
+            ]
+        },
+        "build": {
+            "cmd:commont": "npm.cmd",
+            "params:commont": ["run", "build:mockserver"],
+            "cmd": "npx.cmd",
+            "params:note": "\"--env\", \"cimode=deploy\"   will build patternlab",
+            "params": ["webpack", "--mode=production", "--env", "mockserver", "--env", "production", "--env", "cimode=deploy"],
+            "cwd": "."
+        },
+        "bundle": {
+            "useOriginSource": false,
+            "// bundleMap": {
+                "public/js/myDebug.js": [
+                    "public/js/vendor.js",
+                    "public/js/index.js",
+                    "public/js/brands-prod.js"
+                ]
+            }
+        },
+        "liveServer": {
+            "port": 15566,
+            "host": "0.0.0.0",
+            "root": "public",
+            "open": true
+        }
+    },
+
+    "--- seperator ---": {
+    },
+
+    "productstore:mac::template": {
+        "projectPath": "/Users/zengqingwen/Documents/com.melaleuca/mela-fe.siteCore-vue/fe-library/productstore",
+        "nodeMajorVersionExpect": "=13||=16",
+        "nodemon": {
+            "ext": "js,vue",
+            "watch": [
+                "."
+            ],
+            "ignore": [
+                "public",
+                "dependencyGraph.json"
             ]
         },
         "build": {
@@ -70,14 +297,15 @@
     },
     "productstore:mac::useSourceMap::template": {
         "projectPath": "/Users/zengqingwen/Documents/com.melaleuca/mela-fe.siteCore-vue/fe-library/productstore",
-        "nodeMajorVersionExpect": "=13||=14",
+        "nodeMajorVersionExpect": "=13||=16",
         "nodemon": {
             "ext": "js,vue",
             "watch": [
                 "."
             ],
             "ignore": [
-                "public"
+                "public",
+                "dependencyGraph.json"
             ]
         },
         "build": {

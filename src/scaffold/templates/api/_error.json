@@ -1,0 +1,11 @@
+{
+    "Success": false,
+    "ErrorMessages": [
+        {
+            "Original": "NotFound",
+            "Translation": "未找到",
+            "ErrorData": 404
+        }
+    ],
+    "Data": null
+}

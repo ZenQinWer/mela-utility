@@ -1,10 +1,18 @@
 {
   "name": "mela-utility",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "",
   "bin": {
     "auto-build-and-serve": "bin/auto-build-and-serve.js",
-    "abas": "bin/auto-build-and-serve.js"
+    "abas": "bin/auto-build-and-serve.js",
+    "mela-gen-component": "bin/mela-gen-component.js",
+    "mela-gc": "bin/mela-gen-component.js",
+    "mela-gen-api": "bin/mela-gen-api.js",
+    "mela-ga": "bin/mela-gen-api.js",
+    "mela-gen-store": "bin/mela-gen-store.js",
+    "mela-gs": "bin/mela-gen-store.js",
+    "mela-sort-scss-selector": "bin/mela-sort-scss-selector.js",
+    "mela-sss": "bin/mela-sort-scss-selector.js"
   },
   "files": [
     "bin",
@@ -12,19 +20,32 @@
   ],
   "scripts": {
     "abas": "node src/auto-build-and-serve/index.js",
+    "scaf": "node src/scaffold/index.js",
+    "deploy": "npm publish --access public",
     "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/generator": "^7.23.6",
+    "@babel/parser": "^7.24.0",
+    "@babel/traverse": "^7.24.0",
+    "@babel/types": "^7.24.0",
     "jest": "^29.7.0"
   },
   "dependencies": {
     "kolorist": "^1.8.0",
     "live-server": "^1.2.2",
     "lodash": "^4.17.21",
+    "magicast": "^0.3.3",
     "nodemon": "^3.0.3",
-    "prompts": "^2.4.2"
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "postcss-sorting": "^8.0.2",
+    "prompts": "^2.4.2",
+    "recast": "^0.23.6",
+    "sast": "^0.8.1",
+    "scss-parser": "^1.0.6"
   }
 }
